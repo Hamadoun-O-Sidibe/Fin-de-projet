@@ -1,0 +1,1091 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #f97316;
+
+    --bg-color: #ffffff;
+    --section-color: #f8fafc;
+    --card-color: #ffffff;
+
+    --text-color: #1f2937;
+    --muted-color: #6b7280;
+
+    --border-color: #e5e7eb;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --container-width: 1200px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(92%, var(--container-width));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER / NAVBAR
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--card-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar {
+    width: min(94%, var(--container-width));
+    min-height: 75px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    position: relative;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: auto;
+    height: 58px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+    margin-left: auto;
+}
+
+.nav-items a {
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================================================
+   BOUTONS NAVIGATION
+========================================================= */
+
+.nav-btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.btn {
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    font-weight: 600;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn1 {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn2 {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn2:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   BOUTON MENU MOBILE
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+
+    font-size: 25px;
+    padding: 8px;
+}
+
+
+/* =========================================================
+   BOUTON PANIER / THEME
+========================================================= */
+
+.cart-btn,
+.theme-toggle {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--section-color);
+    color: var(--text-color);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cart-btn:hover,
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    background-color: var(--border-color);
+}
+
+#cart-count {
+    position: absolute;
+
+    top: -4px;
+    right: -4px;
+
+    min-width: 19px;
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2px 5px;
+
+    border-radius: 50%;
+
+    background-color: var(--secondary-color);
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.accueil {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 0;
+
+    background-color: var(--section-color);
+}
+
+.accueil .container {
+    text-align: center;
+}
+
+.accueil h1 {
+    max-width: 850px;
+    margin: 0 auto 20px;
+
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.15;
+}
+
+.accueil p {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: var(--muted-color);
+    font-size: 1.1rem;
+}
+
+.accueil img {
+    width: min(100%, 500px);
+    margin: 35px auto 0;
+
+    border-radius: var(--radius-lg);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--section-color);
+}
+
+h2 {
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   RECHERCHE
+========================================================= */
+
+.search-box {
+    width: min(100%, 650px);
+    margin: 0 auto 25px;
+
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+
+    background-color: var(--card-color);
+    color: var(--text-color);
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: var(--primary-color);
+}
+
+
+/* =========================================================
+   FILTRES
+========================================================= */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+
+    padding: 9px 16px;
+
+    background-color: var(--card-color);
+    color: var(--text-color);
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+
+/* =========================================================
+   GRILLE DES LIVRES
+========================================================= */
+
+.livre-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CARTE LIVRE
+========================================================= */
+
+.livre-card {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px;
+
+    background-color: var(--card-color);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.livre-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   IMAGE LIVRE
+========================================================= */
+
+.book-image {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-md);
+}
+
+.livre-card img {
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: var(--radius-md);
+}
+
+
+/* =========================================================
+   FAVORIS
+========================================================= */
+
+.favorite-btn {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #374151;
+
+    font-size: 18px;
+}
+
+.favorite-btn.active {
+    color: #dc2626;
+}
+
+
+/* =========================================================
+   CATEGORIE
+========================================================= */
+
+.category {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: 15px;
+    margin-bottom: 8px;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    background-color: var(--section-color);
+    color: var(--primary-color);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TITRE / DESCRIPTION LIVRE
+========================================================= */
+
+.livre-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+    line-height: 1.35;
+}
+
+.livre-card p {
+    margin-bottom: 18px;
+
+    color: var(--muted-color);
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   BAS DE CARTE
+========================================================= */
+
+.book-bottom {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.price {
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BOUTON PRINCIPAL
+========================================================= */
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+
+    border: none;
+    border-radius: var(--radius-sm);
+
+    padding: 10px 16px;
+
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   MESSAGE AUCUN RESULTAT
+========================================================= */
+
+#no-results {
+    display: none;
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: var(--muted-color);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-form {
+    width: min(100%, 700px);
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+
+    background-color: var(--card-color);
+    color: var(--text-color);
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#form-message {
+    min-height: 24px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PANIER
+========================================================= */
+
+#cart-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+#cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-modal {
+    width: min(100%, 550px);
+    max-height: 90vh;
+
+    padding: 25px;
+
+    background-color: var(--card-color);
+
+    border-radius: var(--radius-lg);
+
+    overflow-y: auto;
+
+    box-shadow: var(--shadow-md);
+}
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+#close-cart {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--section-color);
+    color: var(--text-color);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item p {
+    margin-top: 3px;
+    color: var(--muted-color);
+}
+
+.remove-item {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.empty-cart {
+    padding: 30px 0;
+
+    text-align: center;
+
+    color: var(--muted-color);
+}
+
+.cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   RETOUR EN HAUT
+========================================================= */
+
+#back-to-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+    color: #ffffff;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.2s ease;
+
+    z-index: 1500;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+    --bg-color: #111827;
+    --section-color: #1f2937;
+    --card-color: #18212f;
+
+    --text-color: #f9fafb;
+    --muted-color: #cbd5e1;
+
+    --border-color: #374151;
+}
+
+body.dark-mode .favorite-btn {
+    background-color: rgba(31, 41, 55, 0.95);
+    color: #ffffff;
+}
+
+body.dark-mode .cart-btn,
+body.dark-mode .theme-toggle {
+    background-color: #374151;
+}
+
+body.dark-mode .cart-btn:hover,
+body.dark-mode .theme-toggle:hover {
+    background-color: #4b5563;
+}
+
+
+/* =========================================================
+   TABLETTES
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .livre-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .nav-items {
+        gap: 18px;
+    }
+
+    .nav-btns .btn {
+        padding: 9px 12px;
+    }
+}
+
+
+/* =========================================================
+   TABLETTES / PETITS ECRANS
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-items {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 15px;
+
+        background-color: var(--card-color);
+
+        border-top: 1px solid var(--border-color);
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .nav-items li {
+        width: 100%;
+    }
+
+    .nav-items a {
+        display: block;
+
+        padding: 12px 10px;
+
+        border-radius: var(--radius-sm);
+    }
+
+    .nav-items a:hover {
+        background-color: var(--section-color);
+    }
+
+    .nav-btns {
+        gap: 5px;
+    }
+
+    .nav-btns .btn {
+        display: none;
+    }
+
+    .livre-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .accueil {
+        min-height: auto;
+        padding: 65px 0;
+    }
+}
+
+
+/* =========================================================
+   TELEPHONES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .navbar {
+        width: 94%;
+        gap: 8px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .menu-toggle {
+        font-size: 23px;
+    }
+
+    .cart-btn,
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    .accueil {
+        padding: 55px 0;
+    }
+
+    .accueil h1 {
+        font-size: 2rem;
+    }
+
+    .accueil p {
+        font-size: 1rem;
+    }
+
+    .livre-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .livre-card img {
+        height: 360px;
+    }
+
+    .book-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .book-bottom .btn {
+        width: 100%;
+    }
+
+    .price {
+        text-align: center;
+    }
+
+    .filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+
+        flex-wrap: nowrap;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+    }
+
+    .cart-modal {
+        width: 100%;
+        max-height: 92vh;
+
+        padding: 20px 16px;
+
+        border-radius: 15px;
+    }
+
+    .cart-item {
+        align-items: flex-start;
+    }
+
+    #back-to-top {
+        right: 15px;
+        bottom: 15px;
+
+        width: 42px;
+        height: 42px;
+    }
+}
+
+
+/* =========================================================
+   TRES PETITS TELEPHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        width: 96%;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .menu-toggle {
+        font-size: 21px;
+    }
+
+    .cart-btn,
+    .theme-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    #cart-count {
+        min-width: 17px;
+        height: 17px;
+        font-size: 10px;
+    }
+
+    .accueil h1 {
+        font-size: 1.7rem;
+    }
+
+    .accueil p {
+        font-size: 0.95rem;
+    }
+
+    .livre-card {
+        padding: 14px;
+    }
+
+    .livre-card img {
+        height: 300px;
+    }
+
+    .livre-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .livre-card p {
+        font-size: 0.9rem;
+    }
+
+    .cart-modal {
+        padding: 18px 14px;
+    }
+}

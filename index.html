@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANDAL — Librairie</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="assets/logo/fav-icon.png">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header id="home">
+
+    <nav class="navbar">
+
+        <a href="#accueil" class="logo">
+            <img src="assets/logo/logo.png" alt="Logo ANDAL">
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-items" id="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#noslivres">Nos livres</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-btns">
+
+            <button class="btn btn1" id="login-btn">
+                Se connecter
+            </button>
+
+            <button class="btn btn2" id="signup-btn">
+                S'inscrire
+            </button>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="cart-btn" id="cart-btn" aria-label="Ouvrir le panier">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="accueil" id="accueil">
+
+        <div class="container text-center">
+
+            <h1>
+                La connaissance commence par la curiosité.
+            </h1>
+
+            <img src="assets/img/an.png"
+                 alt="Un vieux donnant un livre à un enfant">
+
+            <p>
+                Découvrez une librairie où chaque livre est une
+                passerelle entre les générations.
+            </p>
+
+            <a href="#noslivres" class="btn btn-primary">
+                Découvrir nos livres
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= À PROPOS ================= -->
+
+    <section class="apropos" id="apropos">
+
+        <div class="container text-center">
+
+            <h2>
+                Le mot "Andal" signifie connaissance en peul
+            </h2>
+
+            <p>
+                Nous croyons que chaque livre est un héritage
+                qui traverse les générations.
+            </p>
+
+            <p>
+                Notre mission est de transmettre la curiosité,
+                le savoir et le plaisir de lire.
+            </p>
+
+            <blockquote>
+
+                <p lang="ff">
+                    "So da andi a anda a andane sa a anda a anda a andata"
+                </p>
+
+                <p>
+                    <em>
+                        Ce qui signifie :
+                        "Si tu sais que tu ne sais pas tu sauras,
+                        si tu ne sais pas que tu ne sais pas tu ne sauras pas."
+                    </em>
+                </p>
+
+                <footer>
+                    — <cite>Amadou Hampâté Bâ</cite>
+                </footer>
+
+            </blockquote>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LIVRES ================= -->
+
+    <section class="noslivres" id="noslivres">
+
+        <div class="container text-center">
+
+            <h2>Nos livres</h2>
+
+            <p>
+                Découvrez notre sélection de livres.
+            </p>
+
+
+            <!-- RECHERCHE -->
+
+            <div class="book-tools">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Rechercher un livre..."
+                        aria-label="Rechercher un livre"
+                    >
+
+                </div>
+
+
+                <!-- FILTRES -->
+
+                <div class="filters">
+
+                    <button class="filter-btn active" data-filter="all">
+                        Tous
+                    </button>
+
+                    <button class="filter-btn" data-filter="afrique">
+                        Afrique
+                    </button>
+
+                    <button class="filter-btn" data-filter="classique">
+                        Classiques
+                    </button>
+
+                    <button class="filter-btn" data-filter="roman">
+                        Romans
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- LIVRES -->
+
+            <div class="livre-grid" id="book-grid">
+
+
+                <!-- LIVRE 1 -->
+
+                <article
+                    class="livre-card"
+                    data-category="afrique"
+                    data-title="Amkoullel l'enfant peul Amadou Hampâté Bâ"
+                >
+
+                    <div class="book-image">
+
+                        <img
+                            src="assets/img/amkoulel.jpg"
+                            alt="Livre Amkoullel, l'enfant peul"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Ajouter aux favoris"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <span class="category">
+                        Afrique
+                    </span>
+
+                    <h3>
+                        Amkoullel, l'enfant peul —
+                        Amadou Hampâté Bâ
+                    </h3>
+
+                    <p>
+                        Découvrez l'enfance d'Amadou Hampâté Bâ
+                        et les traditions peules à travers un récit
+                        autobiographique riche en sagesse.
+                    </p>
+
+                    <div class="book-bottom">
+
+                        <strong class="price">
+                            5 000 FCFA
+                        </strong>
+
+                        <button
+                            class="btn btn-primary buy-btn"
+                            data-title="Amkoullel, l'enfant peul"
+                            data-price="5000"
+                        >
+                            Acheter
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIVRE 2 -->
+
+                <article
+                    class="livre-card"
+                    data-category="classique"
+                    data-title="L'Étranger Albert Camus"
+                >
+
+                    <div class="book-image">
+
+                        <img
+                            src="assets/img/albert.jpg"
+                            alt="Livre L'Étranger d'Albert Camus"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Ajouter aux favoris"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <span class="category">
+                        Classique
+                    </span>
+
+                    <h3>
+                        L'Étranger — Albert Camus
+                    </h3>
+
+                    <p>
+                        Suivez Meursault, un homme dont
+                        l'indifférence face au monde bouleverse
+                        les conventions.
+                    </p>
+
+                    <div class="book-bottom">
+
+                        <strong class="price">
+                            4 500 FCFA
+                        </strong>
+
+                        <button
+                            class="btn btn-primary buy-btn"
+                            data-title="L'Étranger"
+                            data-price="4500"
+                        >
+                            Acheter
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIVRE 3 -->
+
+                <article
+                    class="livre-card"
+                    data-category="roman"
+                    data-title="Ce que le jour doit à la nuit Yasmina Khadra"
+                >
+
+                    <div class="book-image">
+
+                        <img
+                            src="assets/img/khadra.jpg"
+                            alt="Livre Ce que le jour doit à la nuit"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Ajouter aux favoris"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <span class="category">
+                        Roman
+                    </span>
+
+                    <h3>
+                        Ce que le jour doit à la nuit —
+                        Yasmina Khadra
+                    </h3>
+
+                    <p>
+                        Plongez dans l'histoire émouvante de Younes,
+                        partagé entre deux cultures dans l'Algérie
+                        du XXe siècle.
+                    </p>
+
+                    <div class="book-bottom">
+
+                        <strong class="price">
+                            5 000 FCFA
+                        </strong>
+
+                        <button
+                            class="btn btn-primary buy-btn"
+                            data-title="Ce que le jour doit à la nuit"
+                            data-price="5000"
+                        >
+                            Acheter
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIVRE 4 -->
+
+                <article
+                    class="livre-card"
+                    data-category="roman"
+                    data-title="Nos étoiles contraires John Green"
+                >
+
+                    <div class="book-image">
+
+                        <img
+                            src="assets/img/nos etoiles.jpg"
+                            alt="Livre Nos étoiles contraires"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Ajouter aux favoris"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <span class="category">
+                        Roman
+                    </span>
+
+                    <h3>
+                        Nos étoiles contraires —
+                        John Green
+                    </h3>
+
+                    <p>
+                        Hazel et Augustus se rencontrent alors
+                        qu'ils luttent tous deux contre la maladie.
+                        Une histoire d'amour touchante.
+                    </p>
+
+                    <div class="book-bottom">
+
+                        <strong class="price">
+                            4 500 FCFA
+                        </strong>
+
+                        <button
+                            class="btn btn-primary buy-btn"
+                            data-title="Nos étoiles contraires"
+                            data-price="4500"
+                        >
+                            Acheter
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- MESSAGE RECHERCHE -->
+
+            <p id="no-results" class="no-results">
+                Aucun livre ne correspond à votre recherche.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="container text-center">
+
+            <h2>
+                Contactez-nous
+            </h2>
+
+            <form class="contact-form" id="contact-form">
+
+                <div>
+
+                    <label for="nom">
+                        Nom
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nom"
+                        placeholder="Entrez votre nom"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Entrez votre mail"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Votre message ici"
+                    ></textarea>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Envoyer
+                </button>
+
+                <p id="form-message"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= PANIER ================= -->
+
+<div class="cart-overlay" id="cart-overlay">
+
+    <div class="cart-modal">
+
+        <button
+            class="close-cart"
+            id="close-cart"
+            aria-label="Fermer le panier"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>
+            Votre panier
+        </h2>
+
+        <div id="cart-items">
+            <p class="empty-cart">
+                Votre panier est vide.
+            </p>
+        </div>
+
+        <div class="cart-total">
+
+            <span>
+                Total :
+            </span>
+
+            <strong id="cart-total">
+                0 FCFA
+            </strong>
+
+        </div>
+
+        <button class="btn btn-primary checkout-btn" id="checkout-btn">
+            Passer la commande
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= RETOUR EN HAUT ================= -->
+
+<button
+    id="back-to-top"
+    aria-label="Retour en haut"
+>
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="main-footer">
+
+    <div class="footer-logo">
+        ANDAL
+    </div>
+
+    <p>
+        © 2026 ANDAL — Tous droits réservés.
+    </p>
+
+    <div class="social-icons">
+
+        <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

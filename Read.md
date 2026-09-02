@@ -1,0 +1,5 @@
+## Choix de conception
+Pour ce projet, j'ai voulu créer une librairie en ligne qui mette en avant le partage de la connaissance entre les générations.
+J'ai choisi le nom "ANDAL", qui signifie "connaissance" en peul, car il représente parfaitement l'idée que je voulais transmettre. Le logo et l'image principale montrent un ancien qui partage son savoir avec un plus jeune, afin de symboliser la transmission de la connaissance.
+J'ai utilisé principalement les couleurs bleu et jaune. Le bleu apporte un sentiment de confiance et de sérieux, tandis que le jaune rappelle la lumière, la curiosité et l'apprentissage.
+J'ai également veillé à rendre le site simple à utiliser, avec une navigation claire, des cartes de livres faciles à lire et une mise en page responsive pour que le site fonctionne aussi bien sur ordinateur que sur téléphone.
