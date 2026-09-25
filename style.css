@@ -13,7 +13,6 @@
 
     --text-color: #1f2937;
     --muted-color: #6b7280;
-
     --border-color: #e5e7eb;
 
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -25,7 +24,6 @@
 
     --container-width: 1200px;
 }
-
 
 /* =========================================================
    RESET
@@ -73,7 +71,6 @@ ul {
     list-style: none;
 }
 
-
 /* =========================================================
    CONTAINER
 ========================================================= */
@@ -83,9 +80,8 @@ ul {
     margin: 0 auto;
 }
 
-
 /* =========================================================
-   HEADER / NAVBAR
+   HEADER
 ========================================================= */
 
 header {
@@ -97,6 +93,7 @@ header {
 }
 
 .navbar {
+    position: relative;
     width: min(94%, var(--container-width));
     min-height: 75px;
     margin: 0 auto;
@@ -104,9 +101,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-    position: relative;
 }
 
 .logo {
@@ -119,7 +114,6 @@ header {
     object-fit: contain;
 }
 
-
 /* =========================================================
    NAVIGATION
 ========================================================= */
@@ -128,7 +122,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 28px;
     margin-left: auto;
 }
@@ -143,17 +136,16 @@ header {
     color: var(--primary-color);
 }
 
-
-/* =========================================================
-   BOUTONS NAVIGATION
-========================================================= */
-
 .nav-btns {
     display: flex;
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
 }
+
+/* =========================================================
+   BOUTONS
+========================================================= */
 
 .btn {
     border: none;
@@ -184,25 +176,34 @@ header {
     background-color: var(--primary-dark);
 }
 
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
 
 /* =========================================================
-   BOUTON MENU MOBILE
+   MENU MOBILE
 ========================================================= */
 
 .menu-toggle {
     display: none;
-
     border: none;
     background: transparent;
     color: var(--text-color);
-
     font-size: 25px;
     padding: 8px;
 }
 
-
 /* =========================================================
-   BOUTON PANIER / THEME
+   PANIER / THEME
 ========================================================= */
 
 .cart-btn,
@@ -235,7 +236,6 @@ header {
 
 #cart-count {
     position: absolute;
-
     top: -4px;
     right: -4px;
 
@@ -247,7 +247,6 @@ header {
     justify-content: center;
 
     padding: 2px 5px;
-
     border-radius: 50%;
 
     background-color: var(--secondary-color);
@@ -256,7 +255,6 @@ header {
     font-size: 11px;
     font-weight: bold;
 }
-
 
 /* =========================================================
    HERO
@@ -269,7 +267,6 @@ header {
     align-items: center;
 
     padding: 80px 0;
-
     background-color: var(--section-color);
 }
 
@@ -296,10 +293,8 @@ header {
 .accueil img {
     width: min(100%, 500px);
     margin: 35px auto 0;
-
     border-radius: var(--radius-lg);
 }
-
 
 /* =========================================================
    SECTIONS
@@ -317,26 +312,22 @@ h2 {
     margin-bottom: 35px;
 
     text-align: center;
-
     font-size: clamp(1.8rem, 4vw, 2.7rem);
     line-height: 1.2;
 }
-
 
 /* =========================================================
    RECHERCHE
 ========================================================= */
 
 .search-box {
+    position: relative;
     width: min(100%, 650px);
     margin: 0 auto 25px;
-
-    position: relative;
 }
 
 .search-box input {
     width: 100%;
-
     padding: 14px 18px;
 
     border: 1px solid var(--border-color);
@@ -352,7 +343,6 @@ h2 {
     border-color: var(--primary-color);
 }
 
-
 /* =========================================================
    FILTRES
 ========================================================= */
@@ -361,11 +351,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-
     flex-wrap: wrap;
 
     gap: 10px;
-
     margin-bottom: 40px;
 }
 
@@ -390,23 +378,15 @@ h2 {
     border-color: var(--primary-color);
 }
 
-
 /* =========================================================
-   GRILLE DES LIVRES
+   LIVRES
 ========================================================= */
 
 .livre-grid {
     display: grid;
-
     grid-template-columns: repeat(4, minmax(0, 1fr));
-
     gap: 25px;
 }
-
-
-/* =========================================================
-   CARTE LIVRE
-========================================================= */
 
 .livre-card {
     min-width: 0;
@@ -417,7 +397,6 @@ h2 {
     padding: 18px;
 
     background-color: var(--card-color);
-
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
 
@@ -435,18 +414,14 @@ h2 {
     box-shadow: var(--shadow-md);
 }
 
-
 /* =========================================================
    IMAGE LIVRE
 ========================================================= */
 
 .book-image {
     position: relative;
-
     width: 100%;
-
     overflow: hidden;
-
     border-radius: var(--radius-md);
 }
 
@@ -455,10 +430,8 @@ h2 {
     height: 320px;
 
     object-fit: cover;
-
     border-radius: var(--radius-md);
 }
-
 
 /* =========================================================
    FAVORIS
@@ -466,7 +439,6 @@ h2 {
 
 .favorite-btn {
     position: absolute;
-
     top: 10px;
     right: 10px;
 
@@ -490,14 +462,12 @@ h2 {
     color: #dc2626;
 }
 
-
 /* =========================================================
    CATEGORIE
 ========================================================= */
 
 .category {
     display: inline-block;
-
     width: fit-content;
 
     margin-top: 15px;
@@ -514,14 +484,12 @@ h2 {
     font-weight: 700;
 }
 
-
 /* =========================================================
-   TITRE / DESCRIPTION LIVRE
+   CONTENU LIVRE
 ========================================================= */
 
 .livre-card h3 {
     margin-bottom: 10px;
-
     font-size: 1.2rem;
     line-height: 1.35;
 }
@@ -530,14 +498,8 @@ h2 {
     margin-bottom: 18px;
 
     color: var(--muted-color);
-
     font-size: 0.95rem;
 }
-
-
-/* =========================================================
-   BAS DE CARTE
-========================================================= */
 
 .book-bottom {
     margin-top: auto;
@@ -554,30 +516,8 @@ h2 {
     white-space: nowrap;
 }
 
-
 /* =========================================================
-   BOUTON PRINCIPAL
-========================================================= */
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: #ffffff;
-
-    border: none;
-    border-radius: var(--radius-sm);
-
-    padding: 10px 16px;
-
-    font-weight: 600;
-}
-
-.btn-primary:hover {
-    background-color: var(--primary-dark);
-}
-
-
-/* =========================================================
-   MESSAGE AUCUN RESULTAT
+   RESULTATS
 ========================================================= */
 
 #no-results {
@@ -586,10 +526,8 @@ h2 {
     margin-top: 30px;
 
     text-align: center;
-
     color: var(--muted-color);
 }
-
 
 /* =========================================================
    CONTACT
@@ -601,14 +539,12 @@ h2 {
 
     display: flex;
     flex-direction: column;
-
     gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-
     padding: 13px 15px;
 
     border: 1px solid var(--border-color);
@@ -635,16 +571,13 @@ h2 {
     font-weight: 600;
 }
 
-
 /* =========================================================
    PANIER
 ========================================================= */
 
 #cart-overlay {
     position: fixed;
-
     inset: 0;
-
     z-index: 2000;
 
     display: flex;
@@ -675,11 +608,9 @@ h2 {
     padding: 25px;
 
     background-color: var(--card-color);
-
     border-radius: var(--radius-lg);
 
     overflow-y: auto;
-
     box-shadow: var(--shadow-md);
 }
 
@@ -689,7 +620,6 @@ h2 {
     justify-content: space-between;
 
     gap: 15px;
-
     margin-bottom: 20px;
 }
 
@@ -710,7 +640,6 @@ h2 {
     justify-content: space-between;
 
     gap: 15px;
-
     padding: 15px 0;
 
     border-bottom: 1px solid var(--border-color);
@@ -738,7 +667,6 @@ h2 {
     padding: 30px 0;
 
     text-align: center;
-
     color: var(--muted-color);
 }
 
@@ -748,10 +676,8 @@ h2 {
     justify-content: space-between;
 
     gap: 15px;
-
     margin-top: 20px;
 }
-
 
 /* =========================================================
    RETOUR EN HAUT
@@ -759,9 +685,9 @@ h2 {
 
 #back-to-top {
     position: fixed;
-
     right: 25px;
     bottom: 25px;
+    z-index: 1500;
 
     width: 45px;
     height: 45px;
@@ -783,8 +709,6 @@ h2 {
         opacity 0.25s ease,
         visibility 0.25s ease,
         transform 0.2s ease;
-
-    z-index: 1500;
 }
 
 #back-to-top.show {
@@ -796,6 +720,224 @@ h2 {
     transform: translateY(-3px);
 }
 
+/* =========================================================
+   AUTHENTIFICATION
+========================================================= */
+
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.auth-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.auth-modal {
+    position: relative;
+
+    width: 100%;
+    max-width: 450px;
+    max-height: 90vh;
+
+    padding: 40px 35px;
+
+    background-color: var(--card-color);
+    border-radius: 20px;
+
+    overflow-y: auto;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(25px) scale(0.97);
+
+    transition: transform 0.3s ease;
+
+    scrollbar-width: thin;
+}
+
+.auth-overlay.active .auth-modal {
+    transform: translateY(0) scale(1);
+}
+
+/* =========================================================
+   FERMER AUTH
+========================================================= */
+
+.close-auth {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #f5f5f5;
+    color: #333;
+
+    font-size: 18px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.close-auth:hover {
+    background-color: #111;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* =========================================================
+   FORMULAIRE AUTH
+========================================================= */
+
+.auth-form-container {
+    width: 100%;
+}
+
+.auth-form-container h2 {
+    margin: 0 0 10px;
+
+    color: var(--text-color);
+
+    font-size: 28px;
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+.auth-form-container > p {
+    margin: 0 0 25px;
+
+    color: var(--muted-color);
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+.auth-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.auth-form-container form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.auth-form-container label {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.auth-form-container input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+
+    background-color: var(--section-color);
+    color: var(--text-color);
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.auth-form-container input::placeholder {
+    color: var(--muted-color);
+}
+
+.auth-form-container input:focus {
+    border-color: var(--primary-color);
+    background-color: var(--card-color);
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.auth-form-container .btn-primary {
+    width: 100%;
+    margin-top: 5px;
+    border: none;
+}
+
+#login-message,
+#signup-message {
+    min-height: 20px;
+
+    margin: -5px 0 0;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+.auth-switch {
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: var(--text-color);
+
+    font: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    transition: opacity 0.2s ease;
+}
+
+.auth-switch:hover {
+    opacity: 0.65;
+}
+
+body.auth-open {
+    overflow: hidden;
+}
 
 /* =========================================================
    DARK MODE
@@ -808,7 +950,6 @@ body.dark-mode {
 
     --text-color: #f9fafb;
     --muted-color: #cbd5e1;
-
     --border-color: #374151;
 }
 
@@ -827,13 +968,25 @@ body.dark-mode .theme-toggle:hover {
     background-color: #4b5563;
 }
 
+body.dark-mode .auth-modal {
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.55);
+}
+
+body.dark-mode .close-auth {
+    background-color: #292929;
+    color: #ffffff;
+}
+
+body.dark-mode .close-auth:hover {
+    background-color: #ffffff;
+    color: #111111;
+}
 
 /* =========================================================
    TABLETTES
 ========================================================= */
 
 @media (max-width: 1100px) {
-
     .livre-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -847,13 +1000,11 @@ body.dark-mode .theme-toggle:hover {
     }
 }
 
-
 /* =========================================================
-   TABLETTES / PETITS ECRANS
+   PETITS ECRANS
 ========================================================= */
 
 @media (max-width: 850px) {
-
     .navbar {
         min-height: 68px;
     }
@@ -864,24 +1015,20 @@ body.dark-mode .theme-toggle:hover {
     }
 
     .nav-items {
-        display: none;
-
         position: absolute;
-
         top: 100%;
         left: 0;
 
         width: 100%;
 
+        display: none;
         flex-direction: column;
         align-items: stretch;
 
         gap: 0;
-
         padding: 15px;
 
         background-color: var(--card-color);
-
         border-top: 1px solid var(--border-color);
 
         box-shadow: var(--shadow-md);
@@ -897,9 +1044,7 @@ body.dark-mode .theme-toggle:hover {
 
     .nav-items a {
         display: block;
-
         padding: 12px 10px;
-
         border-radius: var(--radius-sm);
     }
 
@@ -925,13 +1070,11 @@ body.dark-mode .theme-toggle:hover {
     }
 }
 
-
 /* =========================================================
    TELEPHONES
 ========================================================= */
 
 @media (max-width: 600px) {
-
     .container {
         width: 92%;
     }
@@ -986,7 +1129,8 @@ body.dark-mode .theme-toggle:hover {
         align-items: stretch;
     }
 
-    .book-bottom .btn {
+    .book-bottom .btn,
+    .book-bottom .btn-primary {
         width: 100%;
     }
 
@@ -996,11 +1140,11 @@ body.dark-mode .theme-toggle:hover {
 
     .filters {
         justify-content: flex-start;
+
+        flex-wrap: nowrap;
         overflow-x: auto;
 
         padding-bottom: 5px;
-
-        flex-wrap: nowrap;
     }
 
     .filter-btn {
@@ -1012,7 +1156,6 @@ body.dark-mode .theme-toggle:hover {
         max-height: 92vh;
 
         padding: 20px 16px;
-
         border-radius: 15px;
     }
 
@@ -1027,15 +1170,27 @@ body.dark-mode .theme-toggle:hover {
         width: 42px;
         height: 42px;
     }
-}
 
+    .auth-overlay {
+        padding: 15px;
+    }
+
+    .auth-modal {
+        max-width: 100%;
+        padding: 35px 25px;
+        border-radius: 16px;
+    }
+
+    .auth-form-container h2 {
+        font-size: 24px;
+    }
+}
 
 /* =========================================================
    TRES PETITS TELEPHONES
 ========================================================= */
 
 @media (max-width: 400px) {
-
     .navbar {
         width: 96%;
     }
@@ -1087,5 +1242,25 @@ body.dark-mode .theme-toggle:hover {
 
     .cart-modal {
         padding: 18px 14px;
+    }
+
+    .auth-modal {
+        padding: 30px 20px;
+    }
+
+    .auth-form-container h2 {
+        font-size: 22px;
+    }
+
+    .auth-form-container input {
+        padding: 12px;
+    }
+
+    .close-auth {
+        top: 12px;
+        right: 12px;
+
+        width: 34px;
+        height: 34px;
     }
 }

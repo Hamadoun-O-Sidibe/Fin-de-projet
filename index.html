@@ -572,6 +572,357 @@
     <i class="fa-solid fa-arrow-up"></i>
 </button>
 
+<!-- ================= AUTHENTIFICATION ================= -->
+
+<div class="auth-overlay" id="auth-overlay">
+
+    <div class="auth-modal">
+
+        <button
+            class="close-auth"
+            id="close-auth"
+            aria-label="Fermer"
+            type="button"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- CONNEXION -->
+
+        <div class="auth-form-container" id="login-container">
+
+            <h2>Bienvenue sur ANDAL</h2>
+
+            <p>
+                Connectez-vous pour continuer.
+            </p>
+
+            <form id="login-form">
+
+                <div>
+                    <label for="login-email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="Votre adresse email"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="login-password">
+                        Mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Votre mot de passe"
+                        required
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Se connecter
+                </button>
+
+                <p id="login-message"></p>
+
+            </form>
+
+            <p>
+                Vous n'avez pas encore de compte ?
+                <button
+                    type="button"
+                    class="auth-switch"
+                    id="show-signup"
+                >
+                    S'inscrire
+                </button>
+            </p>
+
+        </div>
+
+
+        <!-- INSCRIPTION -->
+
+        <div
+            class="auth-form-container"
+            id="signup-container"
+            style="display: none;"
+        >
+
+            <h2>Créer un compte</h2>
+
+            <p>
+                Rejoignez la communauté ANDAL.
+            </p>
+
+            <form id="signup-form">
+
+                <div>
+                    <label for="signup-name">
+                        Nom
+                    </label>
+
+                    <input
+                        type="text"
+                        id="signup-name"
+                        placeholder="Votre nom"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="signup-email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="signup-email"
+                        placeholder="Votre adresse email"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="signup-password">
+                        Mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signup-password"
+                        placeholder="Minimum 6 caractères"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="signup-confirm-password">
+                        Confirmer le mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signup-confirm-password"
+                        placeholder="Confirmez votre mot de passe"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Créer mon compte
+                </button>
+
+                <p id="signup-message"></p>
+
+            </form>
+
+            <p>
+                Vous avez déjà un compte ?
+                <button
+                    type="button"
+                    class="auth-switch"
+                    id="show-login"
+                >
+                    Se connecter
+                </button>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ================= AUTHENTIFICATION ================= -->
+
+<div class="auth-overlay" id="auth-overlay">
+
+    <div class="auth-modal">
+
+        <button
+            class="close-auth"
+            id="close-auth"
+            aria-label="Fermer"
+            type="button"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- CONNEXION -->
+
+        <div class="auth-form-container" id="login-container">
+
+            <h2>Bienvenue sur ANDAL</h2>
+
+            <p>
+                Connectez-vous pour continuer.
+            </p>
+
+            <form id="login-form">
+
+                <div>
+                    <label for="login-email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="Votre adresse email"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="login-password">
+                        Mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Votre mot de passe"
+                        required
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Se connecter
+                </button>
+
+                <p id="login-message"></p>
+
+            </form>
+
+            <p>
+                Vous n'avez pas encore de compte ?
+                <button
+                    type="button"
+                    class="auth-switch"
+                    id="show-signup"
+                >
+                    S'inscrire
+                </button>
+            </p>
+
+        </div>
+
+
+        <!-- INSCRIPTION -->
+
+        <div
+            class="auth-form-container"
+            id="signup-container"
+            style="display: none;"
+        >
+
+            <h2>Créer un compte</h2>
+
+            <p>
+                Rejoignez la communauté ANDAL.
+            </p>
+
+            <form id="signup-form">
+
+                <div>
+                    <label for="signup-name">
+                        Nom
+                    </label>
+
+                    <input
+                        type="text"
+                        id="signup-name"
+                        placeholder="Votre nom"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="signup-email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="signup-email"
+                        placeholder="Votre adresse email"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="signup-password">
+                        Mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signup-password"
+                        placeholder="Minimum 6 caractères"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="signup-confirm-password">
+                        Confirmer le mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signup-confirm-password"
+                        placeholder="Confirmez votre mot de passe"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Créer mon compte
+                </button>
+
+                <p id="signup-message"></p>
+
+            </form>
+
+            <p>
+                Vous avez déjà un compte ?
+                <button
+                    type="button"
+                    class="auth-switch"
+                    id="show-login"
+                >
+                    Se connecter
+                </button>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 <!-- ================= FOOTER ================= -->
 
